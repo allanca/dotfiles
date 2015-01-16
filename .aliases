@@ -8,6 +8,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
@@ -26,6 +27,14 @@ fi
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
+alias ll="ls -lF ${colorflag}"
+
+alias v="vim"
+alias m="mate ."
+alias subl='open -a "Sublime Text 3" '
+alias s="subl ."
+alias o="open"
+alias oo="open ."
 
 # List all files colorized in long format, including dot files
 alias la="ls -laF ${colorflag}"
@@ -132,6 +141,23 @@ done
 
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
+
+# Git aliases
+alias g='git'
+alias ga='git add'
+alias gs='git status'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gu='git push origin $(parse_git_branch)'
+alias gp='git pull origin $(parse_git_branch)'
+alias gpr='git pull --rebase origin $(parse_git_branch)'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gc='git checkout'
+alias gcm='git checkout master'
+alias gl='git lg'
+alias gf='git fetch origin'
+alias gr='git reset'
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
