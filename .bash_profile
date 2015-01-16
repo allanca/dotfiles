@@ -1,3 +1,5 @@
+eval "$(hub alias -s)"
+
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
@@ -27,3 +29,11 @@ complete -W "NSGlobalDomain" defaults
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer" killall
+
+source ~/.git-completion.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/usr/local/opt/google-cloud-sdk/path.bash.inc'
+
+# The next line enables bash completion for gcloud.
+source '/usr/local/opt/google-cloud-sdk/completion.bash.inc'

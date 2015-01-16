@@ -4,18 +4,21 @@ alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
 alias p="cd ~/Projects"
 alias g="git"
 alias v="vim"
 alias m="mate ."
+alias subl='open -a "Sublime Text 3" '
 alias s="subl ."
 alias o="open"
 alias oo="open ."
 
 # List all files colorized in long format
 alias l="ls -Gl"
+alias ll="ls -Gl"
 
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
@@ -97,6 +100,23 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
+
+# Git aliases
+alias g='git'
+alias ga='git add'
+alias gs='git status'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gu='git push origin $(parse_git_branch)'
+alias gp='git pull origin $(parse_git_branch)'
+alias gpr='git pull --rebase origin $(parse_git_branch)'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gc='git checkout'
+alias gcm='git checkout master'
+alias gl='git lg'
+alias gf='git fetch origin'
+alias gr='git reset'
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
