@@ -4,21 +4,72 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+brew install caskroom/cask/brew-cask
+
+# Apps
+apps=(
+  google-chrome
+  google-drive
+  slack
+  transmit
+  appcleaner
+  firefox
+  spotify
+  vagrant
+  iterm2
+  sublime-text3
+  virtualbox
+  atom
+  flux
+  qlstephen
+  sketch
+  vlc
+  quicklook-json
+  skype
+  transmission
+)
+
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+echo "installing apps..."
+brew cask install --appdir="/Applications" ${apps[@]}
+
 # Install wget with IRI support
 brew install wget --enable-iri
 
 # Install everything else
-brew install ack
-brew install git
-brew install lynx
-brew install node
-brew install rename
-brew install tree
+binaries=(
+	ack
+	git
+	hub
+	lynx
+	node
+	rename
+	tree
+	node
+	python
+	trash
+)
 
+echo "installing binaries..."
+brew install ${binaries[@]}
 
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+
+# Install Bash 4
+brew install bash
+
+# Install more recent versions of some OS X tools
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+
+brew cleanup
 
 # Install python packages
 sudo easy_install pip
-sudo pip install fabric boto
 
 # Install ruby gems
