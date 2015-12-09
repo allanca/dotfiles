@@ -31,7 +31,7 @@ alias ll="ls -lF ${colorflag}"
 
 alias v="vim"
 alias m="mate ."
-alias subl='open -a "Sublime Text 3" '
+alias subl='open -a "Sublime Text" '
 alias s="subl ."
 alias o="open"
 alias oo="open ."

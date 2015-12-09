@@ -37,3 +37,5 @@ export GPG_TTY=$(tty);
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date"
 
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
+export GOPATH=~/src/go
