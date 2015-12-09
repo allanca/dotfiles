@@ -14,3 +14,5 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
+export GOPATH=~/src/go
