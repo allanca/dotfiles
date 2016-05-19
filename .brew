@@ -50,6 +50,7 @@ binaries=(
 	node
 	python
 	trash
+	jq
 )
 
 echo "installing binaries..."
