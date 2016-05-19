@@ -67,7 +67,7 @@
 	insteadOf = "gist:"
 [user]
 	name = Allan Carroll
-	email = allanca@gmail.com
+	email = allan@allancarroll.com
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
