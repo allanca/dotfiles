@@ -201,6 +201,7 @@
 [user]
 	name = Allan Carroll
 	email = allan@allancarroll.com
+	signingkey = 1DC630A3
 
 [filter "media"]
 	clean = git-media-clean %f
