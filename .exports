@@ -37,5 +37,8 @@ export GPG_TTY=$(tty);
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date"
 
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+export PATH="$HOME/.fastlane/bin:$PATH"
 
 export GOPATH=~/src/go
+
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
