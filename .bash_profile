@@ -32,8 +32,21 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 source ~/.git-completion.sh
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/opt/google-cloud-sdk/path.bash.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
-# The next line enables bash completion for gcloud.
-source '/usr/local/opt/google-cloud-sdk/completion.bash.inc'
+eval "$(pyenv init -)"
+
+eval "$(dinghy env)"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
+  source ~/.gnupg/.gpg-agent-info
+  export GPG_AGENT_INFO
+else
+  eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+fi
+
+
+source /usr/local/etc/bash_completion.d/pass

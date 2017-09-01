@@ -8,26 +8,41 @@ brew install caskroom/cask/brew-cask
 
 # Apps
 apps=(
-  google-chrome
-  google-drive
-  slack
-  cloak
-  transmit
+  android-studio
   appcleaner
-  firefox
-  spotify
-  vagrant
-  iterm2
-  sublime-text3
-  virtualbox
   atom
+  avidemux
+  cloak
+  dash
+  evernote
+  fastlane
+  firefox
   flux
+  google-chrome
+  google-cloud-sdk
+  google-drive
+  istat-menus
+  iterm2
+  microsoft-office
+  microsoft-remote-desktop-beta
+  mono-mdk
+  ngrok
+  polymail
+  pycharm
   qlstephen
-  sketch
-  vlc
   quicklook-json
+  sequel-pro
+  sketch
   skype
+  slack
+  spotify
+  steam
+  sublime-text3
   transmission
+  transmit
+  virtualbox
+  visual-studio
+  vlc
 )
 
 # Install apps to /Applications
@@ -40,17 +55,46 @@ brew install wget --enable-iri
 
 # Install everything else
 binaries=(
-	ack
-	git
-	hub
-	lynx
-	node
-	rename
-	tree
-	node
-	python
-	trash
-	jq
+  ack
+  git
+  hub
+  jq
+  lynx
+  node
+  node
+  python
+  rename
+  trash
+  tree
+  bash
+  bash-completion@2
+  cocoapods
+  coreutils
+  dinghy
+  docker
+  docker-compose
+  docker-machine
+  docker-machine-nfs
+  findutils
+  gnu-getopt
+  gnupg
+  gnutls
+  grep
+  hub
+  node
+  openssh
+  openssl
+  pass
+  pyenv
+  python
+  python3
+  sqlite
+  tree
+  unfs3
+  watch
+  watchman
+  wget
+  yarn
 )
 
 echo "installing binaries..."
