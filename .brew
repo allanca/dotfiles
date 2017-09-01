@@ -43,6 +43,7 @@ apps=(
   virtualbox
   visual-studio
   vlc
+  xquartz
 )
 
 # Install apps to /Applications
