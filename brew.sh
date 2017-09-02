@@ -8,6 +8,54 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+brew install caskroom/cask/brew-cask
+
+# Apps
+apps=(
+  android-studio
+  appcleaner
+  atom
+  avidemux
+  cloak
+  dash
+  evernote
+  fastlane
+  firefox
+  flux
+  google-chrome
+  google-cloud-sdk
+  google-backup-and-sync
+  istat-menus
+  iterm2
+  microsoft-office
+  caskroom/versions/microsoft-remote-desktop-beta
+  mono-mdk
+  ngrok
+  polymail
+  pycharm
+  qlstephen
+  quicklook-json
+  sequel-pro
+  sketch
+  skype
+  slack
+  spotify
+  steam
+  sublime-text
+  transmission
+  transmit
+  virtualbox
+  visual-studio
+  vlc
+  xquartz
+)
+
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+echo "installing apps..."
+brew cask install --appdir="/Applications" ${apps[@]}
+
+
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -92,6 +140,56 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+
+# Custom binary list
+brew tap codekitchen/dinghy
+
+# Install everything else
+binaries=(
+  ack
+  git
+  hub
+  jq
+  lynx
+  node
+  node
+  python
+  rename
+  trash
+  tree
+  bash
+  bash-completion@2
+  cocoapods
+  coreutils
+  dinghy
+  docker
+  docker-compose
+  docker-machine
+  docker-machine-nfs
+  findutils
+  gnu-getopt
+  gnupg
+  gnutls
+  grep
+  hub
+  node
+  openssh
+  openssl
+  pass
+  pyenv
+  python
+  python3
+  sqlite
+  tree
+  unfs3
+  watch
+  watchman
+  wget
+  yarn
+)
+
+echo "installing binaries..."
+brew install ${binaries[@]}
 
 # Remove outdated versions from the cellar.
 brew cleanup
