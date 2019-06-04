@@ -8,16 +8,16 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-brew install caskroom/cask/brew-cask
-
 # Apps
 apps=(
   android-studio
   appcleaner
   atom
   avidemux
-  cloak
   dash
+  docker
+  dotnet-sdk
+  encryptme
   evernote
   fastlane
   firefox
@@ -29,6 +29,7 @@ apps=(
   iterm2
   microsoft-office
   caskroom/versions/microsoft-remote-desktop-beta
+  little-snitch
   mono-mdk
   ngrok
   polymail
@@ -39,13 +40,11 @@ apps=(
   sketch
   skype
   slack
-  spotify
-  steam
   sublime-text
   transmission
   transmit
   virtualbox
-  visual-studio
+  visual-studio-code
   vlc
   xquartz
 )
@@ -65,7 +64,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install --with-default-names gnu-sed 
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
@@ -79,17 +78,17 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install --with-iri wget 
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install --with-override-system-vi vim
 brew install grep
 brew install openssh
 brew install screen
-brew install homebrew/php/php56 --with-gmp
+brew install --with-gmp homebrew/php/php56 
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -128,7 +127,7 @@ brew install ack
 #brew install exiv2
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
+brew install --with-webp imagemagick 
 brew install lua
 brew install lynx
 brew install p7zip
@@ -152,8 +151,6 @@ binaries=(
   jq
   lynx
   node
-  node
-  python
   rename
   trash
   tree
@@ -164,8 +161,6 @@ binaries=(
   dinghy
   docker
   docker-compose
-  docker-machine
-  docker-machine-nfs
   findutils
   gnu-getopt
   gnupg
@@ -176,6 +171,7 @@ binaries=(
   openssh
   openssl
   pass
+  pinentry-mac
   pyenv
   python
   python3
