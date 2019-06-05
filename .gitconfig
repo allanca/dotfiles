@@ -80,14 +80,6 @@
 		fi \
 	}; f"
 
-[apply]
-
-	# Detect whitespace errors when applying a patch
-	whitespace = fix
-
-	# Undo a `git push`
-	undopush = push -f origin HEAD^:master
-
 	# What changed
 	wc = whatchanged
 
@@ -97,6 +89,15 @@
 	br = branch
 	wc = whatchanged
 	dt = difftool
+
+[apply]
+
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
+
 
 [core]
 
@@ -206,3 +207,5 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[gpg]
+	program = gpg
