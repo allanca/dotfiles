@@ -397,6 +397,9 @@ defaults write com.apple.dock showhidden -bool true
 # Move the dock to the left of the screen
 defaults write com.apple.dock orientation -string left
 
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 
